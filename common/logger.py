@@ -6,9 +6,15 @@ def get_logger():
     logger.setLevel(logging.INFO)
 
     if not logger.handlers:
-        ch = logging.StreamHandler()
-        formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-        ch.setFormatter(formatter)
-        logger.addHandler(ch)
+        formatter = logging.Formatter(
+            '%(asctime)s - %(levelname)s - %(filename)s:%(lineno)d - %(message)s'
+        )
+
+        console = logging.StreamHandler()
+        console.setFormatter(formatter)
+
+        logger.addHandler(console)
 
     return logger
+
+logger = get_logger()
