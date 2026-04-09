@@ -25,3 +25,19 @@ class TokenHandler:
 
         logger.info(f"获取token成功: {cls.token}")
         return cls.token
+
+    @classmethod
+    def refresh_token(cls):
+        logger.info("重新获取token...")
+
+        response = requests.request(
+            LOGIN_INFO["method"],
+            BASE_URL + LOGIN_INFO["url"],
+            json=LOGIN_INFO["data"]
+        )
+
+        # 模拟获取token
+        cls.token = "new_mock_token_123"
+
+        logger.info(f"新token: {cls.token}")
+        return cls.token
