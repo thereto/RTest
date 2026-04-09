@@ -2,4 +2,8 @@
 import pytest
 
 if __name__ == "__main__":
-    pytest.main(["-s", "testcases"])
+    pytest.main([
+        "-s",
+        "--alluredir=./report",
+        "testcases"
+    ])
