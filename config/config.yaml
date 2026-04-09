@@ -1,1 +1,11 @@
-BASE_URL = "https://httpbin.org"
+base_url: "https://httpbin.org"
+
+default_headers:
+  Content-Type: "application/json"
+
+login:
+  url: "/post"
+  method: "POST"
+  data:
+    username: "test"
+    password: "123456"
