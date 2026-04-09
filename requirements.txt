@@ -1,1 +1,4 @@
 # 依赖
+pytest
+requests
+pyyaml
