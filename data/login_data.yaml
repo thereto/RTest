@@ -1,5 +1,5 @@
 # 测试数据
-- name: "get请求测试"
+- name: "GET请求测试"
   method: "GET"
   url: "/get"
   params:
